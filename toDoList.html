@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>Your To-Do List</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="displayCurrentDate(), loadDatabaseToDoData()">
+    <div class="container">
+      <br />
+      <div class="jumbotron">
+        <h1 class="display-4">To-Do:</h1>
+        <p class="lead">
+          Here's everything you've set as your goals for today!
+        </p>
+      </div>
+      <div id="myform">
+        <b>Fill out the form below then click Add to create a new to-do item! (If you don't need a time, type "N/A")</b>
+        <table>
+            <tr>
+                <td>To-Do Item:</td>
+                <td><input type="text" id="taskName"></td>
+            </tr>
+            <tr>
+                <td>Time to Finish By:</td>
+                <td><input type="text" id="taskTime">
+                <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+      </div>
+      <table class="table table-bordered" id="ToDoList">
+        <tr>
+          <th class="text-center" colspan="4">Today's Date (M/D/Y): </th>
+        </tr>
+        <tr>
+          <th class="text-center"></th>
+          <th class="text-center">To-Do Item</th>
+          <th class="text-center">Time</th>
+          <th class="text-center"></th>
+        </tr>
+      </table>
+      <br />
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="toDoListScripts.js"></script>
+  </body>
+</html>
